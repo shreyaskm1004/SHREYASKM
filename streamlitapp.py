@@ -46,3 +46,14 @@ fig2 = px.bar(
     template='plotly_white'
 )
 st.plotly_chart(fig2)  # Display the chart in Streamlit
+
+# --- Task 2: Interactive Bar Chart ---
+st.subheader("Task 2: Bar Chart - Average Tip by Day")
+# Bar Chart: Average Tip by Day with color for each day
+fig4 = px.histogram(
+    tips, x='day', y='tip', color='day',
+    title='Average Tip by Day',
+    labels={'tip': 'Average Tip ($)', 'day': 'Day of the Week'},
+    template='plotly_white'
+)
+st.plotly_chart(fig4)  # Display the chart in Streamlit
